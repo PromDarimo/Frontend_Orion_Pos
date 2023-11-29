@@ -1,0 +1,121 @@
+<ion-content [fullscreen]="true">
+
+  <div class="sidebar ion-float-left">
+    <ul>
+      <li (click)="goToItemList()">
+        <ion-icon name="pricetags-outline" button="true"></ion-icon>
+        <p style="padding-left: 5px;">Items</p>
+      </li>
+      <!-- <li (click)="goToStock()"><ion-icon name="home-outline"></ion-icon>
+        <p style="padding-left: 5px;">Stock</p>
+    
+      </li>  -->
+      <li (click)="goToBranch()"><ion-icon name="git-branch-outline"></ion-icon>
+        <p style="padding-left: 5px;">Branch</p>
+      </li>
+
+      <li (click)="goToCustomer()"><ion-icon name="people-circle-outline"></ion-icon>
+        <p style="padding-left: 5px;">Customer</p>
+      </li>
+      <li (click)="goToReport()"><ion-icon name="stats-chart-outline"></ion-icon>
+        <p style="padding-left: 5px;">Report</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="item-list ion-float-left">
+    <ng-container *ngIf="goToItem == true">
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="CreateItem()">
+            <ion-card-header>
+              <ion-card-title class="ion-center">
+                <ion-icon class="ion-icon-size" name="pricetag-outline"></ion-icon>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-center">
+              Item List
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+
+    <!-- stock -->
+    <ng-container *ngIf="goToStockList == true">
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="createStock()">
+            <ion-card-header>
+              <ion-card-title class="ion-center">
+                <ion-icon class="ion-icon-size" name="pricetag-outline"></ion-icon>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-center">
+              Stock List
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+
+    <!-- branch -->
+    <ng-container *ngIf="goToUserList == true">
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="createUser()">
+            <ion-card-header>
+              <ion-card-title class="ion-center">
+                <ion-icon class="ion-icon-size" name="pricetag-outline"></ion-icon>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-center">
+              User List
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+
+    <!-- customer -->
+    <ng-container *ngIf="goToCusList == true">
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="createCustomer()">
+            <ion-card-header>
+              <ion-card-title class="ion-center">
+                <ion-icon class="ion-icon-size" name="pricetag-outline"></ion-icon>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-center">
+              Customer List
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+
+    <ng-container *ngIf="goToReportList == true">
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="report()">
+            <ion-card-header>
+              <ion-card-title class="ion-center">
+                <ion-icon class="ion-icon-size" name="pricetag-outline"></ion-icon>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-center">
+              Report List
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+
+  </div>
+
+  <!-- not working yet -->
+  <div class="right-img">
+
+  </div>
+</ion-content>

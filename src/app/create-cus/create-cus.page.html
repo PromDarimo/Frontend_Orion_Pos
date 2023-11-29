@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button (click)="backPage()" slot="start" fill="none"><ion-icon
+        name="arrow-back-outline"></ion-icon></ion-button>
+    <ion-title slot="start">create-item</ion-title>
+    <ion-button (click)="save(user_list)" slot="end" fill="none"><ion-icon name="save-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item class="ion-text-center" style="width: 80%; margin: 0 auto;">
+    <ion-label>Customer Name</ion-label>
+    <ion-input [(ngModel)]="user_list.customer_name"></ion-input>
+  </ion-item>
+  <ion-item class="ion-text-center" style="width: 80%; margin: 0 auto;">
+    <ion-label >Tel</ion-label>
+    <ion-input [(ngModel)]="user_list.tel"></ion-input>
+  </ion-item>
+  <ion-item class="ion-text-center" style="width: 80%; margin: 0 auto;">
+    <ion-label >Address</ion-label>
+    <ion-input [(ngModel)]="user_list.address"></ion-input>
+  </ion-item>
+</ion-content>

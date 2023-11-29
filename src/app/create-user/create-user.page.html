@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button (click)="backPage()" slot="start" fill="none"><ion-icon
+        name="arrow-back-outline"></ion-icon></ion-button>
+    <ion-title slot="start">Create-user</ion-title>
+    <ion-button (click)="save(user_list)" slot="end" fill="none"><ion-icon name="save-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item class="ion-text-center" style="width: 80%; margin: 0 auto;">
+    <ion-label>Username</ion-label>
+    <ion-input [(ngModel)]="user_list.user_name"></ion-input>
+  </ion-item>
+  <ion-item class="ion-text-center" style="width: 80%; margin: 0 auto;">
+    <ion-label >password</ion-label>
+    <ion-input [(ngModel)]="user_list.password"></ion-input>
+  </ion-item>
+</ion-content>
